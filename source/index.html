@@ -53,12 +53,12 @@
       </div>
     </section>
 
-    <form class="form" action="#" method="post">
+    <section class="scheme">
       <div class="container">
-        <h2 class="form__title">Оформление <span class="text-accentuum">Заказа</span></h2>
-        <p class="form__hint">Перед заполнением формы ознакомьтесь с&nbsp;нашей схемой работы!</p>
+        <h2 class="scheme__title">Оформление <span class="text-accentuum">Заказа</span></h2>
+        <p class="scheme__hint">Перед заполнением формы ознакомьтесь с&nbsp;нашей схемой работы!</p>
 
-        <ul class="form__list-step list-step">
+        <ul class="scheme__list-step list-step">
           <li class="list-step__item list-step__item--find">
             <p class="list-step__text">Lorem ipsum dolorsit amet</p>
           </li>
@@ -75,30 +75,36 @@
             <p class="list-step__text">Excepteur sint occaecat cupidatat non proident</p>
           </li>
         </ul>
+      </div>
+    </section>
 
-        <fieldset class="form__fieldset">
-          <select name="type-sistem" id="type">
-            <option value="">Выберите тип системы</option>
-            <option value="sight">Sed ut perspiciatis</option>
-            <option value="nemo">Nemo enim ipsam</option>
-            <option value="harper">Et harum quidem</option>
-            <option value="auto">Temporibus autem</option>
-            <option value="ryan">Itaque earum rerum</option>
-          </select>
+    <form class="form">
+      <div class="container">
+        <select class="form__select" name="type-sistem" id="type">
+          <option value="">Выберите тип системы</option>
+          <option value="sight">Sed ut perspiciatis</option>
+          <option value="nemo">Nemo enim ipsam</option>
+          <option value="harper">Et harum quidem</option>
+          <option value="auto">Temporibus autem</option>
+          <option value="ryan">Itaque earum rerum</option>
+        </select>
 
-          <input type="email" name="email" placeholder="Ваш e-mail">
+        <input class="form__input" type="email" name="email" placeholder="Ваш e-mail">
 
-          <input type="text" name="name" placeholder="Ваше имя">
+        <input class="form__input" type="text" name="name" placeholder="Ваше имя">
 
-          <input type="range">
+        <div class="form__range-wrapper">
+          <label class="form__range-label" for="range">Sed ut perspiciatis, unde omnis iste natus</label>
+          <p class="form__range-count"><span class="range-value">75</span>%</p>
+          <input class="form__range" name="percent" type="range" id="range" min="0" max="100" step="1" value="75">
+        </div>
 
-          <label>
-            <span>Прикрепить файл</span>
-            <input class="v" type="file">
-          </label>
+        <label class="form__file button">
+          <span class="form__file-text">Прикрепить файл</span>
+          <input class="visually-hidden" type="file">
+        </label>
 
-          <button class="form__button button" type="submit">Отправить</button>
-        </fieldset>
+        <button class="form__button button button--dark" type="submit">Отправить</button>
       </div>
     </form>
   </main>
@@ -109,13 +115,13 @@
 
       <ul class="footer__payment-list payment-list">
         <li class="payment-list__item">
-          <a href="#">Qiwi wallet</a>
+          Qiwi wallet
         </li>
         <li class="payment-list__item">
-          <a href="#">Yandex Money</a>
+          Yandex Money
         </li>
         <li class="payment-list__item">
-          <a href="#">Web Money</a>
+          Web Money
         </li>
       </ul>
 
@@ -130,6 +136,6 @@
     </div>
   </footer>
 
-  <script src="./js/index.js"></script>
+  <script src="./js/index.js" type="module"></script>
 </body>
 </html>

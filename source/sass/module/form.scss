@@ -1,18 +1,125 @@
 .form {
-  &__title {
-    text-transform: uppercase;
-    font-weight: 800;
-    text-align: center;
-    margin-top: rem(60);
-    font-size: rem(36);
-    line-height: lhPer(36, 43);
+  font-size: rem(18);
+  line-height: lhPer(18, 22);
+  margin-top: 2.5rem;
+
+  &__select {
+    width: 100%;
+    padding: rem(14) rem(37) rem(14) rem(12);
+    background-image: url("../../img/sprite.svg#select-arrow");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom 50% right -127px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    appearance: none;
+    font-size: inherit;
+    line-height: inherit;
+    margin-bottom: 1.3rem;
+    color: #272733;
   }
 
-  &__hint {
-    font-size: rem(16);
-    font-weight: 400;
-    line-height: lhPer(18, 22);
-    color: #bbbbbb;
-    text-align: center;
+  &__input {
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: rem(14) rem(12);
+    font-size: inherit;
+    line-height: inherit;
+    color: #272733;
+
+    &::placeholder {
+      color: #272733;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1.3rem;
+    }
+
+    &:focus {
+      background-color: #ffffff;
+      outline: solid 2px rgba(255, 255, 255, 0.85);
+    }
+  }
+
+  &__range-wrapper {
+    @include flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: .5rem;
+  }
+
+  &__range-label {
+    width: rem(230);
+    margin-bottom: 1rem;
+  }
+
+  &__range-count {
+    margin: 0;
+    margin-top: rem(10);
+  }
+
+  &__range {
+    width: 100%;
+
+    & {
+      -webkit-appearance: none;
+      appearance: none; 
+      width: 100%;
+      cursor: pointer;
+      outline: none;
+      border-radius: 15px;
+      height: rem(6);
+      background-color: rgba(255, 255, 255, 0.7);
+      border: 1px solid #ffffff;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 15px;
+      width: 15px;
+      background-color: #42a9ed;
+      outline: 3px solid #286690;
+      outline-offset: 0;
+      border-radius: 50%;
+      border: none;
+    }
+
+    &::-moz-range-thumb {
+      height: 15px;
+      width: 15px;
+      background-color: #42a9ed;
+      outline: 3px solid #286690;
+      outline-offset: 0;
+      border-radius: 50%;
+      border: none;
+    }
+  }
+
+  &__file {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__file-text {
+    font-size: rem(15);
+    line-height: lhPer(15, 18);
+    color: #272733;
+    padding-left: rem(28);
+    background-image: url("../../img/sprite.svg#file-input");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom 50% right 77px;
+  }
+
+  &__button {
+    font-size: rem(15);
+    line-height: lhPer(15, 18);
+    width: 100%;
   }
 }
