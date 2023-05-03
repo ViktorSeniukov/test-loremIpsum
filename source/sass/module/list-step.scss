@@ -1,0 +1,67 @@
+.list-step {
+  @include reset-list;
+  margin-top: 3rem;
+
+  &__item {
+    padding: rem(20) rem(12) rem(20) rem(70);
+    min-height: 4.2rem;
+    box-sizing: border-box;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: rem(10);
+      left: rem(10);
+      width: rem(50);
+      height: rem(50);
+      border-radius: 50%;
+      background-color: #3e9cdc;
+      outline-color: #286690;
+      outline-width: 3px;
+      outline-offset: 0;
+      outline-style: solid;
+      background-repeat: no-repeat;
+      background-size: 80%;
+      background-position: center;
+    }
+
+    &--find {
+      &::before {
+        background-image: url("../../img/sprite.svg#find");
+      }
+    }
+
+    &--percent {
+      &::before {
+        background-image: url("../../img/sprite.svg#percent");
+      }
+    }
+
+    &--file {
+      &::before {
+        background-image: url("../../img/sprite.svg#file");
+      }
+    }
+
+    &--email {
+      &::before {
+        background-image: url("../../img/sprite.svg#email");
+      }
+    }
+
+    &--bill {
+      &::before {
+        background-image: url("../../img/sprite.svg#bill");
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  &__text {
+    margin: 0;
+  }
+}

@@ -1,0 +1,18 @@
+.form {
+  &__title {
+    text-transform: uppercase;
+    font-weight: 800;
+    text-align: center;
+    margin-top: rem(60);
+    font-size: rem(36);
+    line-height: lhPer(36, 43);
+  }
+
+  &__hint {
+    font-size: rem(16);
+    font-weight: 400;
+    line-height: lhPer(18, 22);
+    color: #bbbbbb;
+    text-align: center;
+  }
+}
