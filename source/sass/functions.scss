@@ -1,0 +1,14 @@
+@function fz($size) {
+  @return #{$size}px;
+}
+
+@function rem($sizePx) {
+  $remSize: calc((round(calc($sizePx / $main-font-size) * 100)) / 100);
+  @return #{$remSize}rem;
+}
+
+@function lineHeight($fzPx, $lhPx) {
+  $per: calc(round(calc($lhPx / $fzPx) * 100));
+  $perSymbol: '%';
+  @return #{$per}#{$perSymbol};
+}

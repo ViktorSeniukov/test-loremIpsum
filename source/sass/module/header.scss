@@ -1,0 +1,7 @@
+.header {
+  background-color: rgba(16, 16, 29, 0.9);
+  color: #ffffff;
+  padding: rem(33) 1rem rem(32);
+  @include flex;
+  justify-content: space-between;
+}

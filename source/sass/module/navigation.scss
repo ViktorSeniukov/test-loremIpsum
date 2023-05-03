@@ -1,0 +1,21 @@
+.navigation {
+  &__list {
+    @include reset-list;
+    @include flex;
+    flex-wrap: wrap;
+    gap: rem(15) rem(60);
+  }
+
+  &__link {
+    color: $light-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: rem(13);
+    line-height: lineHeight(13, 16);
+
+    &--current {
+      color: $link-current-color;
+    }
+  }
+}
