@@ -1,0 +1,10 @@
+.button {
+  background-color: $light-color;
+  color: $button-light-color;
+  text-decoration: none;
+
+  &--dark {
+    background-color: $button-dark-bgc;
+    color: $light-color;
+  }
+}
