@@ -1,7 +1,16 @@
 .header {
   background-color: rgba(16, 16, 29, 0.9);
   color: #ffffff;
-  padding: rem(33) 1rem rem(32);
-  @include flex;
+  padding: rem(25) 1rem;
+  @include flex(column);
   justify-content: space-between;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 80px;
+
+  &__logo {
+    width: 210px;
+  }
 }

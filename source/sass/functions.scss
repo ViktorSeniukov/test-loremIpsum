@@ -7,7 +7,7 @@
   @return #{$remSize}rem;
 }
 
-@function lineHeight($fzPx, $lhPx) {
+@function lhPer($fzPx, $lhPx) {
   $per: calc(round(calc($lhPx / $fzPx) * 100));
   $perSymbol: '%';
   @return #{$per}#{$perSymbol};
