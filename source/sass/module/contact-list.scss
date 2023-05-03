@@ -1,0 +1,23 @@
+.contact-list {
+  &__link {
+    display: block;
+    padding-left: rem(30);
+    padding-top: rem(10);
+    padding-bottom: rem(10);
+    background-size: 20px 20px;
+    background-position: bottom 50% left;
+    background-repeat: no-repeat;
+    font-size: rem(13);
+    line-height: lhPer(13, 16);
+    color: #c3c3c3;
+    text-decoration: none;
+
+    &--mail {
+      background-image: url("../../img/sprite.svg#mail");
+    }
+
+    &--vk {
+      background-image: url("../../img/sprite.svg#vk");
+    }
+  }
+}

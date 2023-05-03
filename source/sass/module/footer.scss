@@ -1,0 +1,38 @@
+.footer {
+  background-color: #3d4050;
+  margin-top: 1.5rem;
+
+  &__wrapper {
+    @include flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 0;
+  }
+
+  &__copyright {
+    order: 1;
+    margin: 0;
+    text-align: center;
+    font-size: rem(13);
+    line-height: lhPer(13, 16);
+
+    @media (max-width: $m) {
+      padding: 0 2rem;
+    }
+  }
+
+  &__copyright-upper {
+    text-transform: uppercase;
+  }
+
+  &__payment-list {
+    @include reset-list;
+    padding: .5rem 0
+  }
+
+  &__contact-list {
+    @include reset-list;
+    padding: .5rem 0
+  }
+}

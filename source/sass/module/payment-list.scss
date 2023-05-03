@@ -1,0 +1,25 @@
+.payment-list {
+  &__item {
+    padding-left: rem(30);
+    padding-top: rem(10);
+    padding-bottom: rem(10);
+    background-size: 20px 20px;
+    background-position: bottom 50% left;
+    background-repeat: no-repeat;
+    font-size: rem(13);
+    line-height: lhPer(13, 16);
+    color: #c3c3c3;
+
+    &--qiwi {
+      background-image: url("../../img/sprite.svg#qiwi");
+    }
+
+    &--yandex {
+      background-image: url("../../img/sprite.svg#yandex");
+    }
+
+    &--web {
+      background-image: url("../../img/sprite.svg#web");
+    }
+  }
+}
