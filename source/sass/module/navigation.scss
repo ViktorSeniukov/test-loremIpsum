@@ -1,9 +1,30 @@
 .navigation {
   &__list {
     @include reset-list;
-    @include flex;
     flex-wrap: wrap;
     gap: rem(15) rem(60);
+    align-items: center;
+    display: none;
+
+    &--open {
+      @include flex(column);
+      position: absolute;
+      align-items: center;
+      top: 83px;
+      left: 50%;
+      transform: translate(-50%);
+      width: 320px;
+      background-color: rgba(16,16,29,.9);
+
+      & .navigation__item {
+        width: 100%;
+      }
+
+      & .navigation__link {
+        padding: .7rem 2rem;
+        text-align: center;
+      }
+    }
   }
 
   &__link {
@@ -11,8 +32,10 @@
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: rem(13);
-    line-height: lineHeight(13, 16);
+    font-size: rem(20);
+    line-height: lhPer(13, 16);
+    padding: .5rem 1.5rem;
+    display: block;
 
     &--current {
       color: $link-current-color;

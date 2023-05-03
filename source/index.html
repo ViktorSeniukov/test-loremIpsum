@@ -12,114 +12,124 @@
 </head>
 <body class="body">
   <header class="header">
-    <img class="logo" src="./img/LogoLoremIpsum.svg" alt="Логотип компании LoremIpsum.Net" width="247" height="35">
-    <nav class="navigation">
-      <ul class="navigation__list">
-        <li class="navigation__item">
-          <a class="navigation__link navigation__link--current" href="#">Бизнес</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">О нас</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">Цены</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#">Оформить заказ</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="container">
+      <img class="header__logo" src="./img/LogoLoremIpsum.svg" alt="Логотип компании LoremIpsum.Net" width="247" height="35">
+      <button class="menu-button menu-button--open-menu"></button>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--current" href="#">Бизнес</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">О нас</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Цены</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Оформить заказ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
     <section class="hero-block">
-      <h1 class="hero-block__title"><span class="text-accentuum">Lorem ipsum</span> dolor sit amet consectetur <span class="text-accentuum">adipiscing</span></h1>
-      <div class="hero-block__text-wrapper">
-        <p class="hero-block__text"></p>
-        <ul class="hero-block__list">
-          <li class="hero-block__list-item">Totam rem aperiam eaque ipsa</li>
-          <li class="hero-block__list-item">Sit voluptatem accusantium doloremque laudantium</li>
-          <li class="hero-block__list-item">Sed ut perspiciatis, unde omnis iste natus error</li>
-        </ul>
-      </div>
-      <div class="hero-block__button-wrapper">
-        <a href="#" class="hero-block__link button button--dark">заказать</a>
-        <a href="#" class="hero-block__link button">подробнее</a>
+      <div class="container">
+        <h1 class="hero-block__title"><span class="text-accentuum">Lorem ipsum</span> dolor sit amet consectetur <span class="text-accentuum">adipiscing</span></h1>
+        <div class="hero-block__text-wrapper">
+          <p class="hero-block__text">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
+          <ul class="hero-block__list">
+            <li class="hero-block__list-item">Totam rem aperiam eaque ipsa</li>
+            <li class="hero-block__list-item">Sit voluptatem accusantium doloremque laudantium</li>
+            <li class="hero-block__list-item">Sed ut perspiciatis, unde omnis iste natus error</li>
+          </ul>
+        </div>
+        <div class="hero-block__button-wrapper">
+          <a href="#" class="hero-block__link button button--dark">заказать</a>
+          <a href="#" class="hero-block__link button">подробнее</a>
+        </div>
       </div>
     </section>
 
     <form class="form" action="#" method="post">
-      <h2 class="form__title">Оформление <span class="text-accentuum">Заказа</span></h2>
-      <p class="form__hint">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+      <div class="container">
+        <h2 class="form__title">Оформление <span class="text-accentuum">Заказа</span></h2>
+        <p class="form__hint">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
 
-      <ul class="form__list-step list-step">
-        <li class="list-step__item">
-          <p class="list-step__text">Lorem ipsum dolorsit amet</p>
-        </li>
-        <li class="list-step__item">
-          <p class="list-step__text">Сonsecteturadipiscing elit</p>
-        </li>
-        <li class="list-step__item">
-          <p class="list-step__text">Sed do eiusmod tempor</p>
-        </li>
-        <li class="list-step__item">
-          <p class="list-step__text">Esse cillum doloreeu fugiat</p>
-        </li>
-        <li class="list-step__item">
-          <p class="list-step__text">Excepteur sint occaecat cupidatat non proident</p>
-        </li>
-      </ul>
+        <ul class="form__list-step list-step">
+          <li class="list-step__item">
+            <p class="list-step__text">Lorem ipsum dolorsit amet</p>
+          </li>
+          <li class="list-step__item">
+            <p class="list-step__text">Сonsecteturadipiscing elit</p>
+          </li>
+          <li class="list-step__item">
+            <p class="list-step__text">Sed do eiusmod tempor</p>
+          </li>
+          <li class="list-step__item">
+            <p class="list-step__text">Esse cillum doloreeu fugiat</p>
+          </li>
+          <li class="list-step__item">
+            <p class="list-step__text">Excepteur sint occaecat cupidatat non proident</p>
+          </li>
+        </ul>
 
-      <fieldset class="form__fieldset">
-        <select name="type-sistem" id="type">
-          <option value="">Выберите тип системы</option>
-          <option value="sight">Sed ut perspiciatis</option>
-          <option value="nemo">Nemo enim ipsam</option>
-          <option value="harper">Et harum quidem</option>
-          <option value="auto">Temporibus autem</option>
-          <option value="ryan">Itaque earum rerum</option>
-        </select>
+        <fieldset class="form__fieldset">
+          <select name="type-sistem" id="type">
+            <option value="">Выберите тип системы</option>
+            <option value="sight">Sed ut perspiciatis</option>
+            <option value="nemo">Nemo enim ipsam</option>
+            <option value="harper">Et harum quidem</option>
+            <option value="auto">Temporibus autem</option>
+            <option value="ryan">Itaque earum rerum</option>
+          </select>
 
-        <input type="email" name="email" placeholder="Ваш e-mail">
+          <input type="email" name="email" placeholder="Ваш e-mail">
 
-        <input type="text" name="name" placeholder="Ваше имя">
+          <input type="text" name="name" placeholder="Ваше имя">
 
-        <input type="range">
+          <input type="range">
 
-        <label>
-          <span>Прикрепить файл</span>
-          <input class="v" type="file">
-        </label>
+          <label>
+            <span>Прикрепить файл</span>
+            <input class="v" type="file">
+          </label>
 
-        <button class="form__button button" type="submit">Отправить</button>
-      </fieldset>
-
+          <button class="form__button button" type="submit">Отправить</button>
+        </fieldset>
+      </div>
     </form>
   </main>
 
   <footer class="footer">
-    <p class="footer__copyright">&#169; 2018 &#171;<span class="footer__copyright-upper">LoremIpsum.net</span>&#187; Все права защищены.</p>
+    <div class="container">
+      <p class="footer__copyright">&#169; 2018 &#171;<span class="footer__copyright-upper">LoremIpsum.net</span>&#187; Все права защищены.</p>
 
-    <ul class="footer__payment-list payment-list">
-      <li class="payment-list__item">
-        <a href="#">Qiwi wallet</a>
-      </li>
-      <li class="payment-list__item">
-        <a href="#">Yandex Money</a>
-      </li>
-      <li class="payment-list__item">
-        <a href="#">Web Money</a>
-      </li>
-    </ul>
+      <ul class="footer__payment-list payment-list">
+        <li class="payment-list__item">
+          <a href="#">Qiwi wallet</a>
+        </li>
+        <li class="payment-list__item">
+          <a href="#">Yandex Money</a>
+        </li>
+        <li class="payment-list__item">
+          <a href="#">Web Money</a>
+        </li>
+      </ul>
 
-    <ul class="footer__contact-list contact-list">
-      <li class="contact__item">
-        <a href="mailto:info@ipsum228.com">info@ipsum228.com</a>
-      </li>
-      <li class="contact__item">
-        <a href="#">Мы вконтакте</a>
-      </li>
-    </ul>
+      <ul class="footer__contact-list contact-list">
+        <li class="contact__item">
+          <a href="mailto:info@ipsum228.com">info@ipsum228.com</a>
+        </li>
+        <li class="contact__item">
+          <a href="#">Мы вконтакте</a>
+        </li>
+      </ul>
+    </div>
   </footer>
+
+  <script src="./js/index.js"></script>
 </body>
 </html>

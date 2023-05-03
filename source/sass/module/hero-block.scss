@@ -1,0 +1,45 @@
+.hero-block {
+  color: #000000;
+  background-image: url("../../img/hero-block.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  padding-top: rem(126);
+  padding-bottom: rem(50);
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: rem(20);
+  }
+
+  &__list {
+    @include reset-list;
+  }
+
+  &__list-item {
+    position: relative;
+    padding-left: rem(26);
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      transform: translate(- rem(11), rem(11));
+      width: rem(5);
+      height: 1.5px;
+      background-color: #000000;
+    }
+  }
+
+  &__button-wrapper {
+    @include flex;
+    gap: rem(18);
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+}

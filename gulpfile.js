@@ -14,6 +14,8 @@ import plumber from 'gulp-plumber';
 import notify from 'gulp-notify';
 import sass from 'gulp-dart-sass';
 import svgmin from 'gulp-svgmin';
+import terser from 'gulp-terser';
+import libsquoosh from 'gulp-libsquoosh';
 
 const style = () => {
   return gulp.src('source/sass/style.scss', { sourcemaps: true })
@@ -50,6 +52,19 @@ const html = () => {
     .pipe(browserSync.stream())
 }
 
+const script = () => {
+  return gulp.src('source/js/*.js')
+    .pipe(terser())
+    .pipe(gulp.dest('dist/js'))
+    .pipe(browserSync.stream())
+}
+
+const image = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(libsquoosh())
+    .pipe(gulp.dest('dist/img'))
+}
+
 const svg = () => {
   return gulp.src(['source/img/**/*.svg', '!source/img/svg'])
     // .pipe(svgmin())
@@ -61,8 +76,9 @@ const clean = () => {
 }
 
 const watcher = () => {
-  gulp.watch('source/sass/**/*.scss', gulp.series(style));
-  gulp.watch('source/*.html', gulp.series(html));
+  gulp.watch('source/sass/**/*.scss', style);
+  gulp.watch('source/js/*.js', script)
+  gulp.watch('source/*.html', html);
   gulp.watch('dist/*.html').on('change', browserSync.reload);
 }
 
@@ -84,6 +100,8 @@ const start = gulp.series(
   gulp.parallel(
     html,
     style,
+    script,
+    image,
     svg
   ),
   server
@@ -94,6 +112,8 @@ const dev = gulp.series(
   gulp.parallel(
     html,
     style,
+    script,
+    image,
     svg
   )
 )
