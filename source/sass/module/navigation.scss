@@ -10,11 +10,12 @@
       @include flex(column);
       position: absolute;
       align-items: center;
-      top: 83px;
+      top: 89px;
       left: 50%;
       transform: translate(-50%);
       width: 320px;
       background-color: rgba(16,16,29,.9);
+      z-index: 1;
 
       & .navigation__item {
         width: 100%;
@@ -24,6 +25,17 @@
         padding: .7rem 2rem;
         text-align: center;
       }
+    }
+
+    @media (min-width: $m) {
+      @include flex;
+      gap: rem(10);
+      margin-left: auto;
+      max-width: rem(400);
+    }
+
+    @media (min-width: $l) {
+      max-width: rem(700);
     }
   }
 
@@ -37,8 +49,18 @@
     padding: .5rem 1.5rem;
     display: block;
 
+    &:hover {
+      color: $link-hover-color;
+    }
+
     &--current {
       color: $link-current-color;
+    }
+
+    @media (min-width: $m) {
+      font-size: rem(13);
+      padding: rem(5) rem(8);
+      font-weight: 500;
     }
   }
 }

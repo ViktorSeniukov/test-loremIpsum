@@ -1,0 +1,7 @@
+.sentence {
+  @media (min-width: $m) and (max-width: $l) {
+    &--tablet {
+      display: block;
+    }
+  }
+}

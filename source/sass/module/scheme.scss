@@ -1,0 +1,27 @@
+.scheme {
+  &__title {
+    text-transform: uppercase;
+    font-weight: 800;
+    text-align: center;
+    margin-top: rem(60);
+    font-size: rem(36);
+    line-height: lhPer(36, 43);
+
+    @media (min-width: $m) {
+      margin-top: rem(50);
+    }
+
+    @media (min-width: $l) {
+      margin-top: rem(120);
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__hint {
+    font-size: rem(16);
+    font-weight: 400;
+    line-height: lhPer(18, 22);
+    color: #bbbbbb;
+    text-align: center;
+  }
+}

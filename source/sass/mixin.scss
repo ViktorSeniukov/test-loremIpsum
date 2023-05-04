@@ -4,7 +4,7 @@
   list-style-type: none;
 }
 
-@mixin flex($direction: 'row') {
+@mixin flex($direction: row) {
   display: flex;
   flex-direction: $direction;
 }

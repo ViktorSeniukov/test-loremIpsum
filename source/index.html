@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script defer src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -12,9 +15,9 @@
 </head>
 <body class="body">
   <header class="header">
-    <div class="container">
+    <div class="container header__wrapper">
       <img class="header__logo" src="./img/LogoLoremIpsum.svg" alt="Логотип компании LoremIpsum.Net" width="247" height="35">
-      <button class="menu-button menu-button--open-menu"></button>
+      <button class="menu-button"></button>
       <nav class="navigation">
         <ul class="navigation__list">
           <li class="navigation__item">
@@ -34,10 +37,10 @@
     </div>
   </header>
 
-  <main>
+  <main class="main">
     <section class="hero-block">
       <div class="container">
-        <h1 class="hero-block__title"><span class="text-accentuum">Lorem ipsum</span> dolor sit amet consectetur <span class="text-accentuum">adipiscing</span></h1>
+        <h1 class="hero-block__title"><span class="text-accentuum">Lorem ipsum</span> dolor sit amet&nbsp;<span class="sentence sentence--tablet">consectetur <span class="text-accentuum">adipiscing</span></span></h1>
         <div class="hero-block__text-wrapper">
           <p class="hero-block__text">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
           <ul class="hero-block__list">
@@ -53,83 +56,89 @@
       </div>
     </section>
 
-    <form class="form" action="#" method="post">
+    <section class="scheme">
       <div class="container">
-        <h2 class="form__title">Оформление <span class="text-accentuum">Заказа</span></h2>
-        <p class="form__hint">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+        <h2 class="scheme__title">Оформление <span class="text-accentuum">Заказа</span></h2>
+        <p class="scheme__hint">Перед заполнением формы ознакомьтесь с&nbsp;нашей схемой работы!</p>
 
-        <ul class="form__list-step list-step">
-          <li class="list-step__item">
+        <ul class="scheme__list-step list-step">
+          <li class="list-step__item list-step__item--find">
             <p class="list-step__text">Lorem ipsum dolorsit amet</p>
           </li>
-          <li class="list-step__item">
+          <li class="list-step__item list-step__item--percent">
             <p class="list-step__text">Сonsecteturadipiscing elit</p>
           </li>
-          <li class="list-step__item">
+          <li class="list-step__item list-step__item--file">
             <p class="list-step__text">Sed do eiusmod tempor</p>
           </li>
-          <li class="list-step__item">
+          <li class="list-step__item list-step__item--email">
             <p class="list-step__text">Esse cillum doloreeu fugiat</p>
           </li>
-          <li class="list-step__item">
+          <li class="list-step__item list-step__item--bill">
             <p class="list-step__text">Excepteur sint occaecat cupidatat non proident</p>
           </li>
         </ul>
+      </div>
+    </section>
 
-        <fieldset class="form__fieldset">
-          <select name="type-sistem" id="type">
-            <option value="">Выберите тип системы</option>
-            <option value="sight">Sed ut perspiciatis</option>
-            <option value="nemo">Nemo enim ipsam</option>
-            <option value="harper">Et harum quidem</option>
-            <option value="auto">Temporibus autem</option>
-            <option value="ryan">Itaque earum rerum</option>
-          </select>
+    <form class="form" method="post" action="#" enctype="multipart/form-data">
+      <div class="container form__wrapper">
+        <select class="form__select" name="type-sistem" id="type">
+          <option value="none">Выберите тип системы</option>
+          <option value="sight">Sed ut perspiciatis</option>
+          <option value="nemo">Nemo enim ipsam</option>
+          <option value="harper">Et harum quidem</option>
+          <option value="auto">Temporibus autem</option>
+          <option value="ryan">Itaque earum rerum</option>
+        </select>
 
-          <input type="email" name="email" placeholder="Ваш e-mail">
+        <input class="form__input" type="email" name="email" placeholder="Ваш e-mail">
 
-          <input type="text" name="name" placeholder="Ваше имя">
+        <input class="form__input" type="text" name="name" placeholder="Ваше имя">
 
-          <input type="range">
+        <div class="form__range-wrapper">
+          <label class="form__range-label" for="range">Sed ut perspiciatis, unde omnis iste natus</label>
+          <p class="form__range-count"><span class="range-value">75</span>%</p>
+          <input class="form__range" name="percent" type="range" id="range" min="0" max="100" step="1" value="75">
+        </div>
 
-          <label>
-            <span>Прикрепить файл</span>
-            <input class="v" type="file">
-          </label>
+        <label class="form__file button">
+          <span class="form__file-text">Прикрепить файл</span>
+          <input class="visually-hidden file-input" type="file" name="file">
+        </label>
 
-          <button class="form__button button" type="submit">Отправить</button>
-        </fieldset>
+        <button class="form__button button button--dark" type="submit">Отправить</button>
       </div>
     </form>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <p class="footer__copyright">&#169; 2018 &#171;<span class="footer__copyright-upper">LoremIpsum.net</span>&#187; Все права защищены.</p>
+    <div class="container footer__wrapper">
+      <p class="footer__copyright footer__item">&#169; 2018 &#171;<span class="footer__copyright-upper">LoremIpsum.net</span>&#187; Все&nbsp;права защищены.</p>
 
-      <ul class="footer__payment-list payment-list">
-        <li class="payment-list__item">
-          <a href="#">Qiwi wallet</a>
+      <ul class="footer__payment-list payment-list footer__item">
+        <li class="payment-list__item payment-list__item--qiwi">
+          Qiwi wallet
         </li>
-        <li class="payment-list__item">
-          <a href="#">Yandex Money</a>
+        <li class="payment-list__item payment-list__item--yandex">
+          Yandex Money
         </li>
-        <li class="payment-list__item">
-          <a href="#">Web Money</a>
+        <li class="payment-list__item payment-list__item--web">
+          Web Money
         </li>
       </ul>
 
-      <ul class="footer__contact-list contact-list">
-        <li class="contact__item">
-          <a href="mailto:info@ipsum228.com">info@ipsum228.com</a>
+      <ul class="footer__contact-list contact-list footer__item">
+        <li class="contact-list__item">
+          <a class="contact-list__link contact-list__link--mail" href="mailto:info@ipsum228.com">info@ipsum228.com</a>
         </li>
-        <li class="contact__item">
-          <a href="#">Мы вконтакте</a>
+        <li class="contact-list__item">
+          <a class="contact-list__link contact-list__link--vk" href="#">Мы вконтакте</a>
         </li>
       </ul>
     </div>
   </footer>
 
-  <script src="./js/index.js"></script>
+  <script src="./js/index.js" type="module"></script>
 </body>
 </html>

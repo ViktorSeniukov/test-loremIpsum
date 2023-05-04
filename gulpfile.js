@@ -16,6 +16,7 @@ import sass from 'gulp-dart-sass';
 import svgmin from 'gulp-svgmin';
 import terser from 'gulp-terser';
 import libsquoosh from 'gulp-libsquoosh';
+import { stacksvg } from 'gulp-stacksvg';
 
 const style = () => {
   return gulp.src('source/sass/style.scss', { sourcemaps: true })
@@ -66,8 +67,14 @@ const image = () => {
 }
 
 const svg = () => {
-  return gulp.src(['source/img/**/*.svg', '!source/img/svg'])
-    // .pipe(svgmin())
+  return gulp.src(['source/img/*.svg', '!source/img/svg'])
+    .pipe(svgmin())
+    .pipe(gulp.dest('dist/img'))
+}
+
+const sprite = () => {
+  return gulp.src('source/img/svg/*.svg')
+    .pipe(stacksvg({ output: 'sprite' }))
     .pipe(gulp.dest('dist/img'))
 }
 
@@ -95,18 +102,6 @@ const server = (done) => {
   watcher();
 }
 
-const start = gulp.series(
-  clean,
-  gulp.parallel(
-    html,
-    style,
-    script,
-    image,
-    svg
-  ),
-  server
-)
-
 const dev = gulp.series(
   clean,
   gulp.parallel(
@@ -114,9 +109,23 @@ const dev = gulp.series(
     style,
     script,
     image,
-    svg
+    svg,
+    sprite
+  ),
+  server
+)
+
+const build = gulp.series(
+  clean,
+  gulp.parallel(
+    html,
+    style,
+    script,
+    image,
+    svg,
+    sprite
   )
 )
 
-gulp.task('start', start)
 gulp.task('dev', dev)
+gulp.task('build', build)

@@ -1,0 +1,130 @@
+.list-step {
+  @include reset-list;
+  margin-top: 3rem;
+
+  @media (min-width: $m) {
+    display: grid;
+    grid-template-columns: repeat(5, 147px);
+  }
+
+  @media (min-width: $l) {
+    margin-top: rem(80);
+    grid-template-columns: repeat(5, 209px);
+    gap: rem(30);
+  }
+
+  &__item {
+    padding: rem(20) rem(12) rem(20) rem(78);
+    min-height: 4.2rem;
+    box-sizing: border-box;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: rem(10);
+      left: rem(10);
+      width: rem(47);
+      height: rem(47);
+      border-radius: 50%;
+      background-color: #3e9cdc;
+      border-color: #286690;
+      border-width: 4px;
+      // border-offset: 0;
+      border-style: solid;
+      background-repeat: no-repeat;
+      background-size: 80%;
+      background-position: center;
+    }
+
+    &--find {
+      &::before {
+        background-image: url("../../img/sprite.svg#find");
+      }
+    }
+
+    &--percent {
+      &::before {
+        background-image: url("../../img/sprite.svg#percent");
+      }
+    }
+
+    &--file {
+      &::before {
+        background-image: url("../../img/sprite.svg#file");
+      }
+    }
+
+    &--email {
+      &::before {
+        background-image: url("../../img/sprite.svg#email");
+      }
+    }
+
+    &--bill {
+      &::before {
+        background-image: url("../../img/sprite.svg#bill");
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+
+    @media (min-width: $m) {
+      padding: rem(70) rem(15) rem(10);
+
+      &::before {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, rem(10));
+      }
+
+      &:not(:last-child) {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          transform: translate(2rem, 1.8rem);
+          width: rem(75);
+          height: rem(6);
+          background-color: #c4c4c4;
+          mask-image: url("../../img/sprite.svg#step-mark");
+          mask-repeat: no-repeat;
+          mask-size: cover;
+          mask-position: center;
+        }
+      }
+    }
+
+    @media (min-width: $l) {
+      padding: rem(120) rem(10) rem(0);
+
+      &::before {
+        width: 4.5rem;
+        height: 4.5rem;
+        background-size: 70%;
+      }
+
+      &:not(:last-child) {
+        &::after {
+          width: rem(110);
+          transform: translate(4rem, 3rem);
+        }
+      }
+    }
+  }
+
+  &__text {
+    margin: 0;
+    overflow-wrap: break-word;
+    hyphens: auto;
+
+    @media (min-width: $l) {
+      font-size: rem(16);
+      line-height: lhPer(16, 19);
+      text-align: center;
+    }
+  }
+}

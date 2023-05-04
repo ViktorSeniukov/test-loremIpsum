@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp start",
-    "dev": "gulp dev"
+    "dev": "gulp dev",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
     "gulp-rename": "^2.0.0",
+    "gulp-stacksvg": "^2.0.1",
     "gulp-svgmin": "^4.1.0",
     "gulp-terser": "^2.1.0",
     "postcss": "^8.3.11",
