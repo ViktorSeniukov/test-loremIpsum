@@ -1,1 +1,0 @@
-export default function rangeValue(){const e=document.querySelector("#range"),t=document.querySelector(".range-value");e.addEventListener("input",(e=>{const n=e.target.value;t.textContent=n}))}
