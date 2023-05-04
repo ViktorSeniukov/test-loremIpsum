@@ -14,7 +14,7 @@
   <header class="header">
     <div class="container">
       <img class="header__logo" src="./img/LogoLoremIpsum.svg" alt="Логотип компании LoremIpsum.Net" width="247" height="35">
-      <button class="menu-button menu-button--open-menu"></button>
+      <button class="menu-button"></button>
       <nav class="navigation">
         <ul class="navigation__list">
           <li class="navigation__item">
@@ -78,7 +78,7 @@
       </div>
     </section>
 
-    <form class="form">
+    <form class="form" method="post" action="#" enctype="multipart/form-data">
       <div class="container">
         <select class="form__select" name="type-sistem" id="type">
           <option value="">Выберите тип системы</option>
@@ -101,7 +101,7 @@
 
         <label class="form__file button">
           <span class="form__file-text">Прикрепить файл</span>
-          <input class="visually-hidden" type="file">
+          <input class="visually-hidden file-input" type="file" name="file">
         </label>
 
         <button class="form__button button button--dark" type="submit">Отправить</button>

@@ -102,7 +102,7 @@ const server = (done) => {
   watcher();
 }
 
-const start = gulp.series(
+const dev = gulp.series(
   clean,
   gulp.parallel(
     html,
@@ -115,7 +115,7 @@ const start = gulp.series(
   server
 )
 
-const dev = gulp.series(
+const build = gulp.series(
   clean,
   gulp.parallel(
     html,
@@ -127,5 +127,5 @@ const dev = gulp.series(
   )
 )
 
-gulp.task('start', start)
 gulp.task('dev', dev)
+gulp.task('build', build)

@@ -5,4 +5,28 @@
   transform: translate(520%);
   width: 25px;
   height: 25px;
+  background-color: transparent;
+  border: none;
+  appearance: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    background-color: $light-color;
+    mask-image: url("../../img/sprite.svg#hamburger-menu-close");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: .5s ease;
+  }
+
+  &--open-menu {
+    &::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
 }
