@@ -26,6 +26,11 @@
         text-align: center;
       }
     }
+
+    @media (min-width: $m) {
+      @include flex;
+      gap: rem(10);
+    }
   }
 
   &__link {
@@ -40,6 +45,12 @@
 
     &--current {
       color: $link-current-color;
+    }
+
+    @media (min-width: $m) {
+      font-size: rem(13);
+      padding: rem(5) rem(8);
+      font-weight: 500;
     }
   }
 }

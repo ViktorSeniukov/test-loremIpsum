@@ -29,4 +29,8 @@
       transform: translate(-50%, -50%) rotate(90deg);
     }
   }
+
+  @media (min-width: $m) {
+    display: none;
+  }
 }

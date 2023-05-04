@@ -2,6 +2,11 @@
   @include reset-list;
   margin-top: 3rem;
 
+  @media (min-width: $m) {
+    display: grid;
+    grid-template-columns: repeat(5, 147px);
+  }
+
   &__item {
     padding: rem(20) rem(12) rem(20) rem(70);
     min-height: 4.2rem;
@@ -59,9 +64,38 @@
     &:not(:last-child) {
       margin-bottom: rem(15);
     }
+
+    @media (min-width: $m) {
+      padding: rem(70) rem(15) rem(10);
+
+      &::before {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, rem(10));
+      }
+
+      &:not(:last-child) {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          transform: translate(2rem, 1.8rem);
+          width: rem(75);
+          height: rem(6);
+          background-color: #c4c4c4;
+          mask-image: url("../../img/sprite.svg#step-mark");
+          mask-repeat: no-repeat;
+          mask-size: cover;
+          mask-position: center;
+        }
+      }
+    }
   }
 
   &__text {
     margin: 0;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
 }

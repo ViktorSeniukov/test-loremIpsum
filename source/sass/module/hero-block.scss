@@ -11,6 +11,10 @@
     text-transform: uppercase;
     font-weight: 700;
     margin: 0;
+
+    @media (min-width: $m) {
+      font-size: rem(34);
+    }
   }
 
   &__text {
@@ -41,5 +45,9 @@
     gap: rem(18);
     margin-top: 1.5rem;
     flex-wrap: wrap;
+
+    @media (min-width: $m) {
+      margin-left: rem(40);
+    }
   }
 }

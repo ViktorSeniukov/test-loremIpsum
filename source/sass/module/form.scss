@@ -3,6 +3,14 @@
   line-height: lhPer(18, 22);
   margin-top: 2.5rem;
 
+  &__wrapper {
+    @media (min-width: $m) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: rem(18) rem(25);
+    }
+  }
+
   &__select {
     width: 100%;
     padding: rem(14) rem(37) rem(14) rem(12);
@@ -18,6 +26,10 @@
     line-height: inherit;
     margin-bottom: 1.3rem;
     color: #272733;
+
+    @media (min-width: $m) {
+      margin: 0;
+    }
   }
 
   &__input {
@@ -37,6 +49,10 @@
 
     &:not(:last-child) {
       margin-bottom: 1.3rem;
+
+      @media (min-width: $m) {
+        margin: 0;
+      }
     }
 
     &:focus {
@@ -50,11 +66,20 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding-bottom: .5rem;
+
+    @media (min-width: $m) {
+      grid-row: 3/4;
+      grid-column: 1/-1;
+    }
   }
 
   &__range-label {
     width: rem(230);
     margin-bottom: 1rem;
+
+    @media (min-width: $m) {
+      width: auto;
+    }
   }
 
   &__range-count {
@@ -104,6 +129,12 @@
     display: block;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
+
+    @media (min-width: $m) {
+      margin: 0;
+      height: fit-content;
+      margin: auto 0;
+    }
   }
 
   &__file-text {
@@ -121,5 +152,11 @@
     font-size: rem(15);
     line-height: lhPer(15, 18);
     width: 100%;
+
+    @media (min-width: $m) {
+      grid-column: 1/-1;
+      width: rem(370);
+      margin: 0 auto;
+    }
   }
 }

@@ -6,6 +6,10 @@
     margin-top: rem(60);
     font-size: rem(36);
     line-height: lhPer(36, 43);
+
+    @media (min-width: $m) {
+      margin-top: rem(50);
+    }
   }
 
   &__hint {
