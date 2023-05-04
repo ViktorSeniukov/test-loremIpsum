@@ -4,6 +4,10 @@
     gap: rem(18);
   }
 
+  @media (min-width: $l) {
+    gap: rem(15) rem(38);
+  }
+
   &__item {
     padding-left: rem(30);
     padding-top: rem(10);

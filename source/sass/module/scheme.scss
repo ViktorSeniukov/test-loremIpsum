@@ -10,6 +10,11 @@
     @media (min-width: $m) {
       margin-top: rem(50);
     }
+
+    @media (min-width: $l) {
+      margin-top: rem(120);
+      margin-bottom: rem(30);
+    }
   }
 
   &__hint {

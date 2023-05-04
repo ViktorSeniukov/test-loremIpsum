@@ -1,4 +1,9 @@
 .contact-list {
+  @media (min-width: $l) {
+    @include flex;
+    gap: rem(15) rem(38);
+  }
+
   &__link {
     display: block;
     padding-left: rem(30);

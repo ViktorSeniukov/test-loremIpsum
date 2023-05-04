@@ -10,6 +10,11 @@
   box-sizing: border-box;
   min-height: 80px;
 
+  @media (min-width: $l) {
+    padding-top: rem(33);
+    padding-bottom: rem(32);
+  }
+
   &__wrapper {
     @media (min-width: $m) {
       @include flex;

@@ -7,6 +7,12 @@
     grid-template-columns: repeat(5, 147px);
   }
 
+  @media (min-width: $l) {
+    margin-top: rem(80);
+    grid-template-columns: repeat(5, 209px);
+    gap: rem(30);
+  }
+
   &__item {
     padding: rem(20) rem(12) rem(20) rem(70);
     min-height: 4.2rem;
@@ -91,11 +97,34 @@
         }
       }
     }
+
+    @media (min-width: $l) {
+      padding: rem(120) rem(10) rem(0);
+
+      &::before {
+        width: rem(100);
+        height: rem(100);
+        background-size: 70%;
+      }
+
+      &:not(:last-child) {
+        &::after {
+          width: rem(110);
+          transform: translate(4rem, 3rem);
+        }
+      }
+    }
   }
 
   &__text {
     margin: 0;
     overflow-wrap: break-word;
     hyphens: auto;
+
+    @media (min-width: $l) {
+      font-size: rem(16);
+      line-height: lhPer(16, 19);
+      text-align: center;
+    }
   }
 }

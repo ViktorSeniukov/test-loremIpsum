@@ -6,6 +6,10 @@
     margin-top: 3rem;
   }
 
+  @media (min-width: $l) {
+    margin-top: rem(150);
+  }
+
   &__item {
     @media (min-width: $m) {
       position: relative;
@@ -23,6 +27,14 @@
         }
       }
     }
+
+    @media (min-width: $l) {
+      &:not(:last-child) {
+        &::after {
+          transform: translate(2.5rem, -50%);
+        }
+      }
+    }
   }
 
   &__wrapper {
@@ -35,6 +47,11 @@
     @media (min-width: $m) {
       flex-direction: row;
       padding: 2rem 0;
+    }
+
+    @media (min-width: $l) {
+      align-items: center;
+      padding: rem(30) 0;
     }
   }
 
@@ -53,6 +70,10 @@
       order: 0;
       width: rem(180);
       text-align: left;
+    }
+
+    @media (min-width: $l) {
+      width: auto;
     }
   }
 

@@ -10,7 +10,7 @@
       @include flex(column);
       position: absolute;
       align-items: center;
-      top: 83px;
+      top: 89px;
       left: 50%;
       transform: translate(-50%);
       width: 320px;
@@ -30,6 +30,12 @@
     @media (min-width: $m) {
       @include flex;
       gap: rem(10);
+      margin-left: auto;
+      max-width: rem(400);
+    }
+
+    @media (min-width: $l) {
+      max-width: rem(700);
     }
   }
 

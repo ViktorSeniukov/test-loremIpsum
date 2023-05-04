@@ -3,11 +3,20 @@
   line-height: lhPer(18, 22);
   margin-top: 2.5rem;
 
+  @media (min-width: $l) {
+    margin-top: rem(80);
+  }
+
   &__wrapper {
     @media (min-width: $m) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: rem(18) rem(25);
+    }
+
+    @media (min-width: $l) {
+      grid-template-columns: repeat(3, 370px);
+      gap: rem(30);
     }
   }
 
@@ -71,6 +80,11 @@
       grid-row: 3/4;
       grid-column: 1/-1;
     }
+
+    @media (min-width: $l) {
+      grid-column: 1/3;
+      grid-row: auto;
+    }
   }
 
   &__range-label {
@@ -80,6 +94,10 @@
     @media (min-width: $m) {
       width: auto;
     }
+
+    @media (min-width: $l) {
+      margin-bottom: 1.1rem;
+    }
   }
 
   &__range-count {
@@ -88,6 +106,10 @@
 
     @media (min-width: $m) {
       margin-top: .3rem
+    }
+
+    @media (min-width: $l) {
+      margin: 0;
     }
   }
 
@@ -139,6 +161,10 @@
       height: fit-content;
       margin: auto 0;
     }
+
+    @media (min-width: $l) {
+      padding: .8rem;
+    }
   }
 
   &__file-text {
@@ -161,6 +187,11 @@
       grid-column: 1/-1;
       width: rem(370);
       margin: 0 auto;
+    }
+
+    @media (min-width: $l) {
+      margin-top: rem(10);
+      padding: .8rem;
     }
   }
 }

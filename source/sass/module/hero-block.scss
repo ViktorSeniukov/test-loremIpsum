@@ -7,6 +7,12 @@
   padding-top: rem(126);
   padding-bottom: rem(50);
 
+  @media (min-width: $l) {
+    min-height: 850px;
+    box-sizing: border-box;
+    padding-top: rem(206);
+  }
+
   &__title {
     text-transform: uppercase;
     font-weight: 700;
@@ -15,11 +21,23 @@
     @media (min-width: $m) {
       font-size: rem(34);
     }
+
+    @media (min-width: $l) {
+      max-width: rem(774);
+      font-size: rem(48);
+      line-height: lhPer(48, 58);
+    }
   }
 
   &__text {
     font-weight: 700;
     font-size: rem(20);
+
+    @media (min-width: $l) {
+      margin-top: rem(80);
+      margin-bottom: rem(10);
+      line-height: lhPer(20, 24);
+    }
   }
 
   &__list {
@@ -33,10 +51,15 @@
       content: "";
       position: absolute;
       top: 0;
-      transform: translate(- rem(11), rem(11));
+      transform: translate(- rem(16), rem(11));
       width: rem(5);
       height: 1.5px;
       background-color: #000000;
+    }
+
+    @media (min-width: $l) {
+      font-size: rem(20);
+      line-height: lhPer(20, 24);
     }
   }
 
@@ -48,6 +71,11 @@
 
     @media (min-width: $m) {
       margin-left: rem(40);
+    }
+
+    @media (min-width: $l) {
+      margin-left: 0;
+      margin-top: rem(80);
     }
   }
 }
