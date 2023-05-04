@@ -14,7 +14,7 @@
   }
 
   &__item {
-    padding: rem(20) rem(12) rem(20) rem(70);
+    padding: rem(20) rem(12) rem(20) rem(78);
     min-height: 4.2rem;
     box-sizing: border-box;
     position: relative;
@@ -24,14 +24,14 @@
       position: absolute;
       top: rem(10);
       left: rem(10);
-      width: rem(50);
-      height: rem(50);
+      width: rem(47);
+      height: rem(47);
       border-radius: 50%;
       background-color: #3e9cdc;
-      outline-color: #286690;
-      outline-width: 3px;
-      outline-offset: 0;
-      outline-style: solid;
+      border-color: #286690;
+      border-width: 4px;
+      // border-offset: 0;
+      border-style: solid;
       background-repeat: no-repeat;
       background-size: 80%;
       background-position: center;
@@ -102,8 +102,8 @@
       padding: rem(120) rem(10) rem(0);
 
       &::before {
-        width: rem(100);
-        height: rem(100);
+        width: 4.5rem;
+        height: 4.5rem;
         background-size: 70%;
       }
 

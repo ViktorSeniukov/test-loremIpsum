@@ -1,5 +1,5 @@
 .button {
-  background-color: $light-color;
+  background-color: $light-button;
   color: $button-light-color;
   text-decoration: none;
   padding: rem(10) rem(20);
@@ -13,9 +13,25 @@
   font-weight: 400;
   line-height: lhPer(13, 16);
 
+  &:hover {
+    background-color: $light-button-hover;
+  }
+
+  &:active {
+    background-color: $light-button-active;
+  }
+
   &--dark {
-    background-color: $button-dark-bgc;
+    background-color: $dark-button;
     color: $light-color;
     border-color: #ffffff;
+
+    &:hover {
+      background-color: $dark-button-hover;
+    }
+
+    &:active {
+      background-color: $dark-button-active;
+    }
   }
 }

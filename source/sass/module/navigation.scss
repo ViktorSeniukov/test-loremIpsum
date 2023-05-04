@@ -49,6 +49,10 @@
     padding: .5rem 1.5rem;
     display: block;
 
+    &:hover {
+      color: $link-hover-color;
+    }
+
     &--current {
       color: $link-current-color;
     }

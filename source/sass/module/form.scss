@@ -43,7 +43,8 @@
 
   &__input {
     background-color: rgba(255, 255, 255, 0.85);
-    border: 1px solid #FFFFFF;
+    outline: 1px solid #FFFFFF;
+    outline-offset: -1px;
     border-radius: 3px;
     width: 100%;
     box-sizing: border-box;
@@ -51,6 +52,7 @@
     font-size: inherit;
     line-height: inherit;
     color: #272733;
+    border: none;
 
     &::placeholder {
       color: #272733;
@@ -66,7 +68,11 @@
 
     &:focus {
       background-color: #ffffff;
-      outline: solid 2px rgba(255, 255, 255, 0.85);
+      outline: solid 4px rgba(235, 235, 235, 0.85);
+      // outline: solid 10px rgba(39, 29, 29, 0.85);
+      outline-offset: -4px;
+      // padding: rem(12) rem(10);
+      // outline: none;
     }
   }
 
@@ -131,13 +137,13 @@
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
       appearance: none;
-      height: 15px;
-      width: 15px;
+      height: 24px;
+      width: 24px;
       background-color: #42a9ed;
-      outline: 3px solid #286690;
-      outline-offset: 0;
+      border: 3px solid #286690;
+      // outline-offset: 0;
       border-radius: 50%;
-      border: none;
+      // border: none;
     }
 
     &::-moz-range-thumb {
