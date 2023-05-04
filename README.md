@@ -1,5 +1,11 @@
 # test-loremIpsum
-## prod repository
+
+---
+
+* ## prod repository
+
 https://github.com/ViktorSeniukov/test-loremIpsum-prod
-## pages
+
+* ## pages
+
 https://viktorseniukov.github.io/test-loremIpsum-prod
