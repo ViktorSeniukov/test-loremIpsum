@@ -4,4 +4,10 @@
       display: block;
     }
   }
+
+  @media (min-width: $l) {
+    &--desktop {
+      display: block;
+    }
+  }
 }

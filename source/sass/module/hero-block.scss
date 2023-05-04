@@ -69,10 +69,6 @@
     margin-top: 1.5rem;
     flex-wrap: wrap;
 
-    @media (min-width: $m) {
-      margin-left: rem(40);
-    }
-
     @media (min-width: $l) {
       margin-left: 0;
       margin-top: rem(80);
