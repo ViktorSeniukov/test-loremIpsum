@@ -42,57 +42,57 @@ const style = () => {
       postcssCsso()
     ]))
     .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('dist/css', { sourcemaps: '.' }))
+    .pipe(gulp.dest('docs/css', { sourcemaps: '.' }))
     .pipe(browserSync.stream())
 }
 
 const html = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('docs'))
     .pipe(browserSync.stream())
 }
 
 const script = () => {
   return gulp.src('source/js/*.js')
     .pipe(terser())
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest('docs/js'))
     .pipe(browserSync.stream())
 }
 
 const image = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
     .pipe(libsquoosh())
-    .pipe(gulp.dest('dist/img'))
+    .pipe(gulp.dest('docs/img'))
 }
 
 const svg = () => {
   return gulp.src(['source/img/*.svg', '!source/img/svg'])
     .pipe(svgmin())
-    .pipe(gulp.dest('dist/img'))
+    .pipe(gulp.dest('docs/img'))
 }
 
 const sprite = () => {
   return gulp.src('source/img/svg/*.svg')
     .pipe(stacksvg({ output: 'sprite' }))
-    .pipe(gulp.dest('dist/img'))
+    .pipe(gulp.dest('docs/img'))
 }
 
 const clean = () => {
-  return del('dist')
+  return del('docs')
 }
 
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', style);
   gulp.watch('source/js/*.js', script)
   gulp.watch('source/*.html', html);
-  gulp.watch('dist/*.html').on('change', browserSync.reload);
+  gulp.watch('docs/*.html').on('change', browserSync.reload);
 }
 
 const server = (done) => {
   browserSync.init({
     server: {
-      baseDir: 'dist'
+      baseDir: 'docs'
     },
     cors: true,
     notify: false,

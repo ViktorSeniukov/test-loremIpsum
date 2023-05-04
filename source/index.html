@@ -56,60 +56,64 @@
       </div>
     </section>
 
-    <section class="scheme">
-      <div class="container">
-        <h2 class="scheme__title">Оформление <span class="text-accentuum">Заказа</span></h2>
-        <p class="scheme__hint">Перед заполнением формы ознакомьтесь с&nbsp;нашей схемой работы!</p>
+    <div class="main__wrapper">
 
-        <ul class="scheme__list-step list-step">
-          <li class="list-step__item list-step__item--find">
-            <p class="list-step__text">Lorem ipsum dolorsit amet</p>
-          </li>
-          <li class="list-step__item list-step__item--percent">
-            <p class="list-step__text">Сonsecteturadipiscing elit</p>
-          </li>
-          <li class="list-step__item list-step__item--file">
-            <p class="list-step__text">Sed do eiusmod tempor</p>
-          </li>
-          <li class="list-step__item list-step__item--email">
-            <p class="list-step__text">Esse cillum doloreeu fugiat</p>
-          </li>
-          <li class="list-step__item list-step__item--bill">
-            <p class="list-step__text">Excepteur sint occaecat cupidatat non proident</p>
-          </li>
-        </ul>
-      </div>
-    </section>
+      <section class="scheme">
+        <div class="container">
+          <h2 class="scheme__title">Оформление <span class="text-accentuum">Заказа</span></h2>
+          <p class="scheme__hint">Перед заполнением формы ознакомьтесь с&nbsp;нашей схемой работы!</p>
 
-    <form class="form" method="post" action="#" enctype="multipart/form-data">
-      <div class="container form__wrapper">
-        <select class="form__select" name="type-sistem" id="type">
-          <option value="none">Выберите тип системы</option>
-          <option value="sight">Sed ut perspiciatis</option>
-          <option value="nemo">Nemo enim ipsam</option>
-          <option value="harper">Et harum quidem</option>
-          <option value="auto">Temporibus autem</option>
-          <option value="ryan">Itaque earum rerum</option>
-        </select>
-
-        <input class="form__input" type="email" name="email" placeholder="Ваш e-mail">
-
-        <input class="form__input" type="text" name="name" placeholder="Ваше имя">
-
-        <div class="form__range-wrapper">
-          <label class="form__range-label" for="range">Sed ut perspiciatis, unde omnis iste natus</label>
-          <p class="form__range-count"><span class="range-value">75</span>%</p>
-          <input class="form__range" name="percent" type="range" id="range" min="0" max="100" step="1" value="75">
+          <ul class="scheme__list-step list-step">
+            <li class="list-step__item list-step__item--find">
+              <p class="list-step__text">Lorem ipsum dolorsit amet</p>
+            </li>
+            <li class="list-step__item list-step__item--percent">
+              <p class="list-step__text">Сonsecteturadipiscing elit</p>
+            </li>
+            <li class="list-step__item list-step__item--file">
+              <p class="list-step__text">Sed do eiusmod tempor</p>
+            </li>
+            <li class="list-step__item list-step__item--email">
+              <p class="list-step__text">Esse cillum doloreeu fugiat</p>
+            </li>
+            <li class="list-step__item list-step__item--bill">
+              <p class="list-step__text">Excepteur sint occaecat cupidatat non proident</p>
+            </li>
+          </ul>
         </div>
+      </section>
 
-        <label class="form__file button">
-          <span class="form__file-text">Прикрепить файл</span>
-          <input class="visually-hidden file-input" type="file" name="file">
-        </label>
+      <form class="form" method="post" action="#" enctype="multipart/form-data">
+        <div class="container form__wrapper">
+          <select class="form__select" name="type-sistem" id="type">
+            <option value="none">Выберите тип системы</option>
+            <option value="sight">Sed ut perspiciatis</option>
+            <option value="nemo">Nemo enim ipsam</option>
+            <option value="harper">Et harum quidem</option>
+            <option value="auto">Temporibus autem</option>
+            <option value="ryan">Itaque earum rerum</option>
+          </select>
 
-        <button class="form__button button button--dark" type="submit">Отправить</button>
-      </div>
-    </form>
+          <input class="form__input" type="email" name="email" placeholder="Ваш e-mail">
+
+          <input class="form__input" type="text" name="name" placeholder="Ваше имя">
+
+          <div class="form__range-wrapper">
+            <label class="form__range-label" for="range">Sed ut perspiciatis, unde omnis iste natus</label>
+            <p class="form__range-count"><span class="range-value">75</span>%</p>
+            <input class="form__range" name="percent" type="range" id="range" min="0" max="100" step="1" value="75">
+          </div>
+
+          <label class="form__file button">
+            <span class="form__file-text">Прикрепить файл</span>
+            <input class="visually-hidden file-input" type="file" name="file">
+          </label>
+
+          <button class="form__button button button--dark" type="submit">Отправить</button>
+        </div>
+      </form>
+
+    </div>
   </main>
 
   <footer class="footer">

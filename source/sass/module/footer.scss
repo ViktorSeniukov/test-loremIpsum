@@ -1,14 +1,5 @@
 .footer {
   background-color: #3d4050;
-  margin-top: 1.5rem;
-
-  @media (min-width: $m) {
-    margin-top: 3rem;
-  }
-
-  @media (min-width: $l) {
-    margin-top: rem(150);
-  }
 
   &__item {
     @media (min-width: $m) {
