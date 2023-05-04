@@ -2,12 +2,40 @@
   background-color: #3d4050;
   margin-top: 1.5rem;
 
+  @media (min-width: $m) {
+    margin-top: 3rem;
+  }
+
+  &__item {
+    @media (min-width: $m) {
+      position: relative;
+
+      &:not(:last-child) {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translate(1rem, -50%);
+          width: 1px;
+          height: 1rem;
+          background-color: #c3c3c3;
+        }
+      }
+    }
+  }
+
   &__wrapper {
     @include flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     padding: 1rem 0;
+
+    @media (min-width: $m) {
+      flex-direction: row;
+      padding: 2rem 0;
+    }
   }
 
   &__copyright {
@@ -20,6 +48,12 @@
     @media (max-width: $m) {
       padding: 0 2rem;
     }
+
+    @media (min-width: $m) {
+      order: 0;
+      width: rem(180);
+      text-align: left;
+    }
   }
 
   &__copyright-upper {
@@ -28,11 +62,19 @@
 
   &__payment-list {
     @include reset-list;
-    padding: .5rem 0
+    padding: .5rem 0;
+
+    @media (min-width: $m) {
+      padding: 0;
+    }
   }
 
   &__contact-list {
     @include reset-list;
-    padding: .5rem 0
+    padding: .5rem 0;
+
+    @media (min-width: $m) {
+      padding: 0;
+    }
   }
 }

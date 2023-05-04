@@ -1,4 +1,9 @@
 .payment-list {
+  @media (min-width: $m) {
+    @include flex;
+    gap: rem(18);
+  }
+
   &__item {
     padding-left: rem(30);
     padding-top: rem(10);
